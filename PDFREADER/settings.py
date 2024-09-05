@@ -67,15 +67,16 @@ TEMPLATES = [
 WSGI_APPLICATION = 'PDFREADER.wsgi.application'
 
 
-# Replace the DATABASES section of your settings.py with this
+
+
 DATABASES = {
   'default': {
     'ENGINE': 'django.db.backends.postgresql',
-    'NAME': 'api',
-    'USER': 'my_user',
-    'PASSWORD': 'securePassword123',
-    'HOST': '127.0.0.1',
-    'PORT': 5432,
+    'NAME': os.environ.get("PGDATABASE"),
+    'USER': os.environ.get("PGUSER"),
+    'PASSWORD': os.environ.get("PGPASSWORD"),
+    'HOST': os.environ.get("PGHOST"),
+    'PORT': os.environ.get("PGPORT"),
   }
 }
 
