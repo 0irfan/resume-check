@@ -19,7 +19,7 @@ SECRET_KEY = 'django-insecure-p$vn3v_a32v$)+68ox*rxp+td77^^mv(0ckg%36rcs_$+%w0+$
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['10.1.0.5']
 
 
 # Application definition
@@ -71,14 +71,11 @@ WSGI_APPLICATION = 'PDFREADER.wsgi.application'
 DATABASES = {
   'default': {
     'ENGINE': 'django.db.backends.postgresql',
-    'NAME': os.environ.get("PGDATABASE"),
-    'USER': os.environ.get("PGUSER"),
-    'PASSWORD': os.environ.get("PGPASSWORD"),
-    'HOST': os.environ.get("PGHOST"),
-    'PORT': os.environ.get("PGPORT"),
-    'OPTIONS': {
-      'sslmode': 'require',
-    },
+    'NAME': 'api',
+    'USER': 'my_user',
+    'PASSWORD': 'securePassword123',
+    'HOST': '10.1.0.5',
+    'PORT': '',
   }
 }
 
