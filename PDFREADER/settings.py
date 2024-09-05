@@ -74,8 +74,8 @@ DATABASES = {
     'NAME': 'api',
     'USER': 'my_user',
     'PASSWORD': 'securePassword123',
-    'HOST': '10.1.0.5',
-    'PORT': '',
+    'HOST': '127.0.0.1',
+    'PORT': 5432,
   }
 }
 
